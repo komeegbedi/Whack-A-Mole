@@ -6,16 +6,12 @@ const startBtn = document.querySelector('.btn.btn-grad.start');
 const scoreText = document.querySelector('div.score .current-score');
 const result = document.querySelector('div.results');
 const replay = document.querySelector('div.replay button');
+const hiScore = document.querySelector('.highest-score');
 let numOnClicks = 0;
 let timeUp = false;
 let score = 0;
 let total = 0;
 let prevHole;
-
-
-if (localStorage.getItem("highest")){
-    document.querySelector('.h-score').innerHTML = localStorage.getItem("highest");
-}
 
 const randomNum = (min , max) =>Math.floor(Math.random() * (max-min) + min);
 
@@ -76,11 +72,21 @@ const timer = () =>{
             startBtn.classList.remove("btn-disabled");
             timeUp = true; 
             let percent = Math.round((score/total) * 100);
-            result.querySelector('.result-text').innerHTML = `Time is up! Your got ${percent}%`;
-            result.classList.remove('d-none');
-            localStorage.setItem("highest", score);
 
+            let highestScore = localStorage.getItem("score");
+            if (percent > highestScore) {
+                localStorage.setItem("score", percent);
+                result.querySelector('.result-text').innerHTML = `Time is up! Your got ${percent}% <br> Your highest score so far!!`;
+            }
+             else{
+                result.querySelector('.result-text').innerHTML = `Time is up! Your got ${percent}%`;
+             }
+
+
+            result.classList.remove('d-none');
             replay.addEventListener('click' , restart);
+           
+            displayHighest();
         }
 
     }, 1000);
@@ -126,4 +132,19 @@ moles.forEach(mole =>{
     });
 });
 
+
+const displayHighest = () =>{
+    if (typeof Storage !== undefined) {
+
+        if (localStorage.getItem("score")) {
+            hiScore.innerHTML = `${localStorage.getItem("score")}%`;
+        }
+    }
+    else {
+        document.querySelector('.score span').classList.add('d-none');
+        hiScore.classList.add('d-none');
+    }
+}
+
+displayHighest();
 
