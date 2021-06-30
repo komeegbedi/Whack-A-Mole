@@ -146,5 +146,14 @@ const displayHighest = () =>{
     }
 }
 
+const addTransition = () =>{
+
+    moles.forEach(mole =>{
+        mole.style.WebkitTransition = "all 0.4s ease-in";
+        mole.style.transition = "all 0.4s ease-in";
+    });
+}
+
 displayHighest();
+addTransition();
 
