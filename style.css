@@ -1,0 +1,162 @@
+body{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+
+.results{
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.95); /* Black background with opacity */
+    z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+.results .result-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    height: 60%;
+}
+
+.replay button{
+    width: 200px;
+}
+
+.game-name{
+    margin-bottom: 20px;
+}
+
+div.countdown{
+    margin-top: 50px;
+}
+div.countdown  h4{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+div.countdown span.minutes , div.countdown span.seconds , div.countdown span.col{
+    font-size: 45px;
+}
+
+div.score{
+    margin-top: 30px;
+}
+
+div.score span{
+    font-size: 30px;
+}
+div.score.col-12 > span:nth-child(1){
+    margin-right: 20px;
+}
+
+section.main-game{
+    margin-top: 40px;
+}
+
+section.main-game>div.row{
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+section.main-game div.col-4{
+    margin-bottom: 30px;
+    position: relative;
+    height: 200px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.hole {
+  /* flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative; */
+}
+
+.hole:after {
+  display: block;
+  background: url('dirt.svg') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -5px;
+}
+
+.mole {
+  background: url('mole.svg') bottom center no-repeat;
+  background-size: 25%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.up.mole {
+  top: -30px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #7474BF 0%, #348AC7  51%, #7474BF  100%)
+}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    display: block;
+    border: none;
+    margin: 0 auto;
+    transition:all 0.3s ease-in;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+button.btn-disabled{
+    background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8  51%, #757F9A  100%);
+    opacity: .4;
+    cursor: not-allowed;
+}
+         
+         
+
+@media only screen and (max-width:768px) {
+    div.countdown  h4{
+        display: block;
+    }
+
+    section.main-game {
+        max-width: 100%;
+    }
+    section.main-game div.col-4{
+        height: 150px;
+    }
+
+    .mole{
+        background-size: 60%;
+    }
+}

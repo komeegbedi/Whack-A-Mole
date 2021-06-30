@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-A-Mole</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="results d-none">
+        <h3 class="result-text display-3"></h3>
+    
+        <div class="row replay">
+            <p class="lead">Game starts right away when replay is clicked</p>
+            <button class="btn btn-grad"> Replay</button>
+        </div>
+    
+    </div>
+    <div class="container">
+
+        <h2 class="display-2 game-name">Whack-A-Mole  <span class="h-score"></span></h2>
+
+        <button class="btn btn-grad start">Start Game</button>
+
+        <div class="countdown">
+            <h4 class="display-4">Game ends in: </h4>
+            <span class="minutes">01</span>
+            <span class="col">:</span>
+            <span class="seconds">00</span>
+        </div>
+
+        <div class="row">
+            <div class="score col-12">
+                <span>Your Score </span>
+                <span class="current-score">0</span>
+            </div>
+        </div>
+
+
+        <section class="main-game">
+
+           <div class="row">
+
+                <div class="col-4">
+                   <div class="mole"></div>
+                   <div class="hole"></div>
+                </div>
+                <div class="col-4">
+                    <div class="mole"></div>
+                    <div class="hole"></div>
+                </div>
+                <div class="col-4">
+                    <div class="mole"></div>
+                    <div class="hole"></div>
+                </div>
+                <div class="col-4">
+                    <div class="mole"></div>
+                    <div class="hole"></div>
+                </div>
+                <div class="col-4">
+                    <div class="mole"></div>
+                    <div class="hole"></div>
+                </div>
+                <div class="col-4">
+                    <div class="mole"></div>
+                    <div class="hole"></div>
+                </div>
+           </div>
+            
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
