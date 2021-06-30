@@ -79,8 +79,10 @@ section.main-game div.col-4{
     height: 200px;
     margin-bottom: 50px;
     overflow: hidden;
-    -webkit-transition: all 0.4s ease-in;
-    transition:all 0.4s ease-in;
+   -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition:all 0.4s ease-in;
+  transition:all 0.4s ease-in;
 }
 
 .hole {
@@ -109,6 +111,8 @@ section.main-game div.col-4{
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition:all 0.4s ease-in;
   transition:all 0.4s ease-in;
 }
 
