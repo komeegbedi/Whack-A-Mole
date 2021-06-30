@@ -76,10 +76,10 @@ const timer = () =>{
             let highestScore = localStorage.getItem("score");
             if (percent > highestScore) {
                 localStorage.setItem("score", percent);
-                result.querySelector('.result-text').innerHTML = `Time is up! Your got ${percent}% <br> Your highest score so far!!`;
+                result.querySelector('.result-text').innerHTML = `Time is up! You got ${percent}% <br> Your highest score so far!!`;
             }
              else{
-                result.querySelector('.result-text').innerHTML = `Time is up! Your got ${percent}%`;
+                result.querySelector('.result-text').innerHTML = `Time is up! You got ${percent}%`;
              }
 
 
